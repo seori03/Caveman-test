@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>케이스 라이브러리 | 이서준 케이스로그</title>
+<meta name="description" content="병원 임상 케이스와 승마장 라이더 컨디셔닝 케이스를 SOAP 형식으로 정리한 라이브러리입니다.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <span class="mark">CL</span>
+      <span>
+        <span class="name-kr">이서준 케이스로그</span>
+        <span class="name-role">임상 성장 플랫폼</span>
+      </span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">홈</a>
+      <a href="cases.html" class="active">케이스 라이브러리</a>
+      <a href="timeline.html">성장 타임라인</a>
+      <a href="about.html">소개</a>
+    </nav>
+    <div class="header-actions">
+      <a href="cases.html" class="btn btn-primary btn-sm desktop-only">케이스 보기</a>
+      <button class="nav-toggle" aria-label="메뉴 열기" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">홈</a> / 케이스 라이브러리</p>
+    <h1>병원과 승마장, 두 트랙의 케이스</h1>
+    <p>모든 사례는 당사자의 동의 여부와 무관하게 개인 식별 정보를 제거하고 재구성했습니다. 트랙과 영역, 두 필터를 조합해서 볼 수 있습니다.</p>
+  </div>
+</div>
+
+<main>
+  <section>
+    <div class="container">
+
+      <div class="filter-group">
+        <span class="filter-label">트랙</span>
+        <div class="filter-tabs track">
+          <button class="active" data-filter="all">전체</button>
+          <button data-filter="hospital">병원 임상</button>
+          <button data-filter="equestrian">승마장 라이더</button>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">영역</span>
+        <div class="filter-tabs domain">
+          <button class="active" data-filter="all">전체</button>
+          <button data-filter="ortho">정형외과</button>
+          <button data-filter="neuro">신경계</button>
+          <button data-filter="seat">좌석 밸런스</button>
+          <button data-filter="core">코어 컨디셔닝</button>
+        </div>
+      </div>
+
+      <div class="grid grid-3">
+
+        <a href="cases/hospital-cervical-01.html" class="case-card" data-track="hospital" data-domain="ortho">
+          <div class="thumb">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.7-4.35-9.3-8.6C.8 8.7 2.3 4.9 6 4.1c2.1-.45 3.9.5 5 2 1.1-1.5 2.9-2.45 5-2 3.7.8 5.2 4.6 3.3 8.3-2.6 4.25-9.3 8.6-9.3 8.6z"/></svg>
+          </div>
+          <div class="body">
+            <div class="tag-row">
+              <span class="tag">병원 · 정형외과</span>
+              <span class="tag domain">경추</span>
+            </div>
+            <h3>사무직 40대, 만성 경추 통증 및 편측 두통</h3>
+            <p>상부 경추 과가동성과 견갑골 안정성 저하를 감별하고 도수치료·자세 재교육을 병행한 사례.</p>
+            <div class="meta"><span>중재 기간 <b>6주</b></span><span>NPRS 감소 <b>7 → 2</b></span></div>
+          </div>
+        </a>
+
+        <a href="cases/equestrian-core-01.html" class="case-card track-equestrian" data-track="equestrian" data-domain="seat">
+          <div class="thumb">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20c1-4 2-6 4-8 1.4-1.4 1-3 3-5s4.5-2.5 6-1c-1 1-2 2-2 3.5S16.5 12 15 13c-2 1.5-4 2-6 5-1 1.5-1.5 2-2 2z"/><path d="M14 8c1.5-1.5 3-2 5-2"/></svg>
+          </div>
+          <div class="body">
+            <div class="tag-row">
+              <span class="tag track-equestrian">승마장 · 라이더 컨디셔닝</span>
+              <span class="tag domain">좌석 밸런스</span>
+            </div>
+            <h3>성인 아마추어 라이더, 좌우 비대칭 좌석과 코어 약화</h3>
+            <p>편측으로 치우치는 좌석 밸런스와 코어 지구력 저하를 동작 평가로 확인하고 개선한 사례.</p>
+            <div class="meta"><span>중재 기간 <b>4주</b></span><span>좌우 편차 <b>개선 확인</b></span></div>
+          </div>
+        </a>
+
+        <div class="case-card placeholder" data-track="hospital" data-domain="neuro">
+          <div class="thumb">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          </div>
+          <div class="body">
+            <div class="tag-row">
+              <span class="tag">병원 · 신경계</span>
+              <span class="tag domain">준비중</span>
+            </div>
+            <h3>다음 케이스를 기록하는 중입니다</h3>
+            <p>신경계 영역 케이스가 준비되는 대로 SOAP 형식으로 추가할 예정입니다.</p>
+            <div class="meta"><span class="coming-soon">작성 예정</span></div>
+          </div>
+        </div>
+
+        <div class="case-card placeholder track-equestrian" data-track="equestrian" data-domain="core">
+          <div class="thumb">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          </div>
+          <div class="body">
+            <div class="tag-row">
+              <span class="tag track-equestrian">승마장 · 코어 컨디셔닝</span>
+              <span class="tag domain">준비중</span>
+            </div>
+            <h3>다음 케이스를 기록하는 중입니다</h3>
+            <p>승마장 코어 컨디셔닝 케이스가 준비되는 대로 추가할 예정입니다.</p>
+            <div class="meta"><span class="coming-soon">작성 예정</span></div>
+          </div>
+        </div>
+
+        <div class="case-card placeholder" data-track="hospital" data-domain="ortho">
+          <div class="thumb">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          </div>
+          <div class="body">
+            <div class="tag-row">
+              <span class="tag">병원 · 정형외과</span>
+              <span class="tag domain">준비중</span>
+            </div>
+            <h3>다음 케이스를 기록하는 중입니다</h3>
+            <p>추가 정형외과 케이스가 준비되는 대로 SOAP 형식으로 추가할 예정입니다.</p>
+            <div class="meta"><span class="coming-soon">작성 예정</span></div>
+          </div>
+        </div>
+
+        <div class="case-card placeholder track-equestrian" data-track="equestrian" data-domain="seat">
+          <div class="thumb">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          </div>
+          <div class="body">
+            <div class="tag-row">
+              <span class="tag track-equestrian">승마장 · 라이더 컨디셔닝</span>
+              <span class="tag domain">준비중</span>
+            </div>
+            <h3>다음 케이스를 기록하는 중입니다</h3>
+            <p>추가 라이더 케이스가 준비되는 대로 추가할 예정입니다.</p>
+            <div class="meta"><span class="coming-soon">작성 예정</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <p style="margin-top:32px; font-size:13.5px; color:var(--color-text-faint);">
+        새 케이스를 추가하려면 <code style="background:var(--color-surface-alt); padding:2px 6px; border-radius:4px; color:var(--color-accent-dark);">cases/case-template.html</code>을 복사해서 내용을 채운 뒤, 이 페이지에 카드 하나를 추가하면 됩니다.
+      </p>
+
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container">
+      <div class="band">
+        <div>
+          <h2>이 라이브러리는 계속 채워집니다</h2>
+          <p>케이스가 쌓일수록 요령이 생기고, 그 변화는 성장 타임라인에서 확인할 수 있습니다.</p>
+        </div>
+        <a href="timeline.html" class="btn btn-primary">성장 타임라인 보기</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand">
+          <span class="mark">CL</span>
+          <span class="name-kr">이서준 케이스로그</span>
+        </a>
+        <p>병원 임상과 승마장 라이더 컨디셔닝, 두 현장의 케이스를 SOAP 형식으로 기록하며 임상적 사고를 훈련하는 개인 성장 플랫폼입니다.</p>
+      </div>
+      <div>
+        <h5>바로가기</h5>
+        <ul>
+          <li><a href="cases.html">케이스 라이브러리</a></li>
+          <li><a href="timeline.html">성장 타임라인</a></li>
+          <li><a href="about.html">소개</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>기록 원칙</h5>
+        <ul>
+          <li>모든 사례는 비식별화 · 재구성</li>
+          <li>SOAP 형식 준수</li>
+          <li>결과보다 추론 과정 우선 기록</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> 이서준 케이스로그. All rights reserved.</span>
+      <span>본 사이트는 개인 임상 성장 기록 목적의 포트폴리오입니다.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

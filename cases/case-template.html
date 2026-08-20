@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><span class="fill-me">케이스 제목</span> | 이서준 케이스로그</title>
+<meta name="description" content="여기에 이 케이스를 한 문장으로 요약한 설명을 적으세요.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<!--
+  이 파일은 새 케이스를 추가할 때 복사해서 쓰는 템플릿입니다.
+  cases/ 폴더 안에 새 이름(예: hospital-lowback-02.html, equestrian-posture-02.html)으로 복사한 뒤,
+  <span class="fill-me"> 로 표시된 부분과 노란 박스로 감싼 예시 문구들을 실제 내용으로 바꾸세요.
+
+  트랙 전환 방법:
+  - 병원 케이스  → <body> 태그에 클래스를 추가하지 않음 (기본값 = 병원, 녹색 accent)
+  - 승마장 케이스 → <body class="track-equestrian"> 로 바꾸고, 아래 .case-hero 에도 track-equestrian 클래스를 추가 (테라코타 accent)
+    * body와 case-hero 두 군데 모두 바꿔야 색상이 전체에 일관되게 적용됩니다.
+
+  작성 후에는 ../cases.html 파일에 카드 하나를 추가하고, 필요하면 ../timeline.html 에도
+  성장 타임라인 항목을 추가하세요.
+-->
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="brand">
+      <span class="mark">CL</span>
+      <span>
+        <span class="name-kr">이서준 케이스로그</span>
+        <span class="name-role">임상 성장 플랫폼</span>
+      </span>
+    </a>
+    <nav class="main-nav">
+      <a href="../index.html">홈</a>
+      <a href="../cases.html" class="active">케이스 라이브러리</a>
+      <a href="../timeline.html">성장 타임라인</a>
+      <a href="../about.html">소개</a>
+    </nav>
+    <div class="header-actions">
+      <a href="../cases.html" class="btn btn-primary btn-sm desktop-only">케이스 보기</a>
+      <button class="nav-toggle" aria-label="메뉴 열기" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="case-hero">
+  <div class="container">
+    <p class="breadcrumb"><a href="../index.html">홈</a> / <a href="../cases.html">케이스 라이브러리</a> / <span class="fill-me">케이스 제목</span></p>
+    <span class="tag fill-me">병원 또는 승마장 · 영역 · 세부분류</span>
+    <h1 class="fill-me">케이스 제목을 여기에 적으세요</h1>
+    <div class="case-facts">
+      <div class="case-fact"><span>대상</span><b class="fill-me">연령대·성별·배경</b></div>
+      <div class="case-fact"><span>주호소 / 목표</span><b class="fill-me">핵심 호소 또는 목표 한 줄</b></div>
+      <div class="case-fact"><span>중재 기간</span><b class="fill-me">주 n회 × n주</b></div>
+      <div class="case-fact"><span>기록 시점</span><b class="fill-me">YYYY년 M월</b></div>
+    </div>
+    <div class="disclaimer-box">본 사례는 실제 경험을 바탕으로 개인 식별 정보를 제거하고 재구성한 것입니다. 포트폴리오 및 임상 기록 목적으로만 사용됩니다.</div>
+  </div>
+</div>
+
+<main>
+
+  <div class="container">
+    <div class="howto-box">
+      <h2>이 템플릿 사용법</h2>
+      <ol>
+        <li>이 파일을 <code>cases/</code> 폴더 안에 새 파일명으로 복사하세요 (예: <code>hospital-shoulder-02.html</code>).</li>
+        <li>승마장 케이스라면 <code>&lt;body&gt;</code>와 <code>.case-hero</code> 두 곳에 <code>track-equestrian</code> 클래스를 추가하세요.</li>
+        <li>노란색으로 표시된 <code>fill-me</code> 부분과 S·O·A·P·결과 섹션 본문을 실제 내용으로 교체하세요.</li>
+        <li>완성되면 이 안내 상자( <code>.howto-box</code> ) 전체를 삭제하세요.</li>
+        <li><code>../cases.html</code>에 케이스 카드를 추가하고, 의미 있는 성장 포인트라면 <code>../timeline.html</code>에도 항목을 추가하세요.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- S -->
+  <section class="soap-section">
+    <div class="container">
+      <div class="soap-head">
+        <span class="soap-letter">S</span>
+        <div><h2>Subjective</h2><span>환자·라이더가 말한 것, 배경 정보</span></div>
+      </div>
+      <div class="soap-body">
+        <p class="fill-me">환자/라이더가 직접 말한 주호소와 배경, 생활 습관, 목표를 서술형으로 적으세요.</p>
+        <div class="finding-list">
+          <li><b>주호소</b> <span class="fill-me">핵심 증상 또는 이슈</span></li>
+          <li><b>악화/완화 요인</b> <span class="fill-me">무엇이 심해지게/나아지게 하는지</span></li>
+          <li><b>배경</b> <span class="fill-me">직업, 생활 습관, 관련 이력</span></li>
+          <li><b>목표</b> <span class="fill-me">환자/라이더가 원하는 결과</span></li>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- O -->
+  <section class="soap-section">
+    <div class="container">
+      <div class="soap-head">
+        <span class="soap-letter">O</span>
+        <div><h2>Objective</h2><span>측정 가능한 평가 데이터</span></div>
+      </div>
+      <div class="soap-body">
+        <p class="fill-me">평가 방식과 전반적 소견을 간단히 요약하세요.</p>
+        <div class="finding-list">
+          <li><b>평가 항목 1</b> <span class="fill-me">ROM / MMT / 특수검사 / 동작 평가 등 결과</span></li>
+          <li><b>평가 항목 2</b> <span class="fill-me">결과</span></li>
+          <li><b>평가 항목 3</b> <span class="fill-me">결과</span></li>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- A -->
+  <section class="soap-section">
+    <div class="container">
+      <div class="soap-head">
+        <span class="soap-letter">A</span>
+        <div><h2>Assessment</h2><span>임상적 추론</span></div>
+      </div>
+      <div class="soap-body">
+        <p class="fill-me">O에서 확인한 데이터를 근거로 한 임상적 가설을 &ldquo;~라고 판단됨&rdquo; 톤으로 서술하세요.</p>
+        <div class="reasoning-box">
+          <span class="label">임상적 사고 메모</span>
+          <p class="fill-me">이 케이스를 통해 처음 세운 가설이 어떻게 바뀌었는지, 또는 어떤 판단 기준을 사용했는지 솔직하게 적으세요. 이 부분이 &ldquo;성장&rdquo;을 보여주는 핵심입니다.</p>
+        </div>
+        <p class="fill-me"><b>감별 우선순위</b><br>① 1차 원인<br>② 지속/보상 요인<br>③ 2차 증상</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- P -->
+  <section class="soap-section">
+    <div class="container">
+      <div class="soap-head">
+        <span class="soap-letter">P</span>
+        <div><h2>Plan</h2><span>중재/컨디셔닝 계획과 재평가</span></div>
+      </div>
+      <div class="soap-body">
+        <p class="fill-me">전체 진행 순서를 한두 문장으로 요약하세요.</p>
+        <div class="plan-grid">
+          <div class="plan-item"><span class="phase fill-me">1단계</span><h4 class="fill-me">단계 제목</h4><p class="fill-me">이 단계에서 하는 일</p></div>
+          <div class="plan-item"><span class="phase fill-me">2단계</span><h4 class="fill-me">단계 제목</h4><p class="fill-me">이 단계에서 하는 일</p></div>
+          <div class="plan-item"><span class="phase fill-me">3단계</span><h4 class="fill-me">단계 제목</h4><p class="fill-me">이 단계에서 하는 일</p></div>
+          <div class="plan-item"><span class="phase fill-me">재평가</span><h4 class="fill-me">재평가 시점</h4><p class="fill-me">무엇을 다시 측정하는지</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Outcome -->
+  <section class="soap-section">
+    <div class="container">
+      <div class="soap-head">
+        <span class="soap-letter">R</span>
+        <div><h2>Outcome</h2><span>결과와 회고</span></div>
+      </div>
+      <div class="soap-body">
+        <div class="outcome-grid">
+          <div class="outcome-row">
+            <div class="outcome-label"><b class="fill-me">측정 항목 1</b><span class="fill-me">전 → 후</span></div>
+            <div class="outcome-track"><div class="outcome-fill after" style="width:70%"></div></div>
+          </div>
+          <div class="outcome-row">
+            <div class="outcome-label"><b class="fill-me">측정 항목 2</b><span class="fill-me">전 → 후</span></div>
+            <div class="outcome-track"><div class="outcome-fill after" style="width:70%"></div></div>
+          </div>
+        </div>
+        <div class="retro-box">
+          <span class="label">회고</span>
+          <p class="fill-me">목표를 얼마나 달성했는지, 무엇이 예상과 달랐는지, 다음 케이스에는 무엇을 다르게 할지 적으세요. 이 문단이 성장 타임라인에 옮겨질 핵심 문장이 됩니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="case-nav">
+      <a href="../cases.html" class="btn btn-outline">← 케이스 라이브러리로</a>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="../index.html" class="brand">
+          <span class="mark">CL</span>
+          <span class="name-kr">이서준 케이스로그</span>
+        </a>
+        <p>병원 임상과 승마장 라이더 컨디셔닝, 두 현장의 케이스를 SOAP 형식으로 기록하며 임상적 사고를 훈련하는 개인 성장 플랫폼입니다.</p>
+      </div>
+      <div>
+        <h5>바로가기</h5>
+        <ul>
+          <li><a href="../cases.html">케이스 라이브러리</a></li>
+          <li><a href="../timeline.html">성장 타임라인</a></li>
+          <li><a href="../about.html">소개</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>기록 원칙</h5>
+        <ul>
+          <li>모든 사례는 비식별화 · 재구성</li>
+          <li>SOAP 형식 준수</li>
+          <li>결과보다 추론 과정 우선 기록</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> 이서준 케이스로그. All rights reserved.</span>
+      <span>본 사이트는 개인 임상 성장 기록 목적의 포트폴리오입니다.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
