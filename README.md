@@ -1,6 +1,6 @@
 # Caveman-test
 
-## 이서준 케이스로그 — 임상 성장 플랫폼
+## 서동주 케이스로그 — 임상 성장 플랫폼
 
 기존 취업용 포트폴리오(`claude/physical-therapist-portfolio-wlwzdf` 브랜치)와는 별도로 만든,
 병원 임상 케이스와 승마장 라이더 케이스를 SOAP 형식으로 기록하는 개인 성장 플랫폼입니다.
