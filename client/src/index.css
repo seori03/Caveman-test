@@ -1,0 +1,627 @@
+@import "tailwindcss";
+
+:root {
+  --ivory: #f5f0e6;
+  --ink: #1a1a1a;
+  --ink-soft: #77736c;
+  --ink-line: rgba(26, 26, 26, 0.22);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--ink);
+  font-family: "IBM Plex Sans KR", "Pretendard", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2 {
+  font-family: "Bodoni Moda", serif;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.mono {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.site {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ---------- topbar ---------- */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 4.5vw;
+  border-bottom: 1px solid var(--ink-line);
+}
+
+.brand {
+  font-family: "Bodoni Moda", serif;
+  font-size: 16px;
+}
+
+.brand em {
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.topbar-sub {
+  color: var(--ink-soft);
+  font-size: 9px;
+}
+
+/* ---------- landing ---------- */
+.landing {
+  padding: 6vh 4.5vw 6vh;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  color: var(--ink-soft);
+  font-size: 10px;
+  margin-bottom: 18px;
+}
+
+.landing-copy {
+  display: flex;
+  align-items: flex-end;
+  gap: 6vw;
+  margin-bottom: 7vh;
+  flex-wrap: wrap;
+}
+
+.landing-copy h1 {
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: 1.05;
+}
+
+.landing-copy h1 em {
+  font-style: italic;
+}
+
+.landing-lede {
+  color: var(--ink-soft);
+  font-size: 13px;
+  line-height: 1.75;
+  max-width: 320px;
+  margin: 0;
+}
+
+.gait-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.gait-entry {
+  background: transparent;
+  border: 1px solid var(--ink-line);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 16px 14px 20px;
+  min-height: 250px;
+  text-align: left;
+  transition: background 240ms var(--ease-out), color 240ms var(--ease-out), transform 240ms var(--ease-out);
+}
+
+.gait-entry:hover,
+.gait-entry:focus-visible {
+  background: var(--ink);
+  color: var(--ivory);
+  transform: translateY(-6px);
+  outline: none;
+}
+
+.gait-entry-index {
+  color: var(--ink-soft);
+  font-size: 9px;
+}
+
+.gait-entry:hover .gait-entry-index {
+  color: rgba(245, 240, 230, 0.6);
+}
+
+.gait-entry-stage {
+  width: 100%;
+  height: 128px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gait-entry-name {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.gait-entry-name strong {
+  font-family: "Bodoni Moda", serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.gait-entry-name small {
+  color: var(--ink-soft);
+  font-size: 9px;
+}
+
+.gait-entry:hover .gait-entry-name small {
+  color: rgba(245, 240, 230, 0.7);
+}
+
+.gait-entry-hint {
+  color: var(--ink-soft);
+  font-size: 8px;
+  margin-top: auto;
+}
+
+.gait-entry:hover .gait-entry-hint {
+  color: rgba(245, 240, 230, 0.7);
+}
+
+.landing-foot {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--ink-line);
+  color: var(--ink-soft);
+  font-size: 9px;
+  margin-top: 30px;
+  padding-top: 16px;
+}
+
+/* ---------- transition overlay ---------- */
+.transition-stage {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  background: var(--ink);
+  color: var(--ivory);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8vw;
+  animation: transition-fade 640ms var(--ease-out) both;
+}
+
+.transition-copy h2 {
+  font-size: clamp(40px, 6vw, 84px);
+  margin-top: 10px;
+}
+
+.transition-copy em {
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.transition-horse {
+  width: min(38vw, 260px);
+}
+
+@keyframes transition-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ---------- gait scene ---------- */
+.gait-scene {
+  padding: 6vh 4.5vw 6vh;
+  max-width: 1180px;
+  margin: 0 auto;
+  min-height: calc(100vh - 76px);
+  display: flex;
+  flex-direction: column;
+}
+
+.gait-scene-meta {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.icon-button {
+  background: transparent;
+  border: 1px solid var(--ink-line);
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.gait-scene-meta h2 {
+  font-size: clamp(38px, 5vw, 64px);
+  margin-top: 8px;
+}
+
+.gait-scene-meta em {
+  color: var(--ink-soft);
+  font-size: 0.5em;
+  font-style: normal;
+  letter-spacing: 0.1em;
+}
+
+.scene-clock {
+  color: var(--ink-soft);
+  font-size: 9px;
+  white-space: nowrap;
+  padding-top: 8px;
+}
+
+.gait-stage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 4vh 0;
+}
+
+.gait-stage-figure {
+  position: relative;
+  width: min(60vw, 420px);
+}
+
+.scene-horse {
+  width: 100%;
+  height: auto;
+}
+
+.scene-rider {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: auto;
+}
+
+.gait-posture-caption {
+  text-align: center;
+  max-width: 420px;
+  margin: 0;
+}
+
+.gait-posture-caption .mono {
+  display: block;
+  color: var(--ink-soft);
+  font-size: 9px;
+  margin-bottom: 8px;
+}
+
+.gait-posture-caption strong {
+  font-family: "Bodoni Moda", serif;
+  font-size: 26px;
+  font-weight: 400;
+  display: block;
+}
+
+.gait-posture-detail {
+  display: block;
+  color: var(--ink-soft);
+  font-size: 12px;
+  line-height: 1.7;
+  margin-top: 10px;
+}
+
+.gait-scene-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--ink-line);
+  padding-top: 16px;
+  gap: 16px;
+}
+
+.gait-scene-bottom p {
+  font-family: "Bodoni Moda", serif;
+  font-size: 16px;
+  margin: 6px 0 0;
+}
+
+.reset-button {
+  background: var(--ink);
+  color: var(--ivory);
+  border: 0;
+  padding: 12px 20px;
+  font-size: 10px;
+  border-radius: 2px;
+}
+
+/* ---------- horse / rider ink sketches ---------- */
+.horse-figure,
+.rider-figure {
+  width: 100%;
+  overflow: visible;
+}
+
+.horse-stroke {
+  stroke: var(--ink);
+  stroke-width: 5;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.gait-entry:hover .horse-stroke {
+  stroke: var(--ivory);
+}
+
+.rider-figure .horse-stroke {
+  stroke-width: 4.5;
+}
+
+.horse-eye {
+  fill: var(--ink);
+}
+
+.gait-entry:hover .horse-eye {
+  fill: var(--ivory);
+}
+
+.horse-mane {
+  stroke-width: 3;
+}
+
+/* resting pose (no motion / reduced motion fallback) */
+.leg-front-upper {
+  transform: rotate(-10deg);
+}
+.leg-front-lower {
+  transform: rotate(8deg);
+}
+.leg-hind-upper {
+  transform: rotate(12deg);
+}
+.leg-hind-lower {
+  transform: rotate(-10deg);
+}
+
+/* Walk: slow, small-amplitude, four-beat feel */
+@keyframes walk-front-upper {
+  0%, 100% { transform: rotate(-14deg); }
+  50% { transform: rotate(16deg); }
+}
+@keyframes walk-front-lower {
+  0%, 100% { transform: rotate(10deg); }
+  50% { transform: rotate(-8deg); }
+}
+@keyframes walk-hind-upper {
+  0%, 100% { transform: rotate(16deg); }
+  50% { transform: rotate(-14deg); }
+}
+@keyframes walk-hind-lower {
+  0%, 100% { transform: rotate(-12deg); }
+  50% { transform: rotate(10deg); }
+}
+.horse-figure--walk.is-animating .leg-front-upper { animation: walk-front-upper 1.6s ease-in-out infinite; }
+.horse-figure--walk.is-animating .leg-front-lower { animation: walk-front-lower 1.6s ease-in-out infinite; }
+.horse-figure--walk.is-animating .leg-hind-upper { animation: walk-hind-upper 1.6s ease-in-out infinite; }
+.horse-figure--walk.is-animating .leg-hind-lower { animation: walk-hind-lower 1.6s ease-in-out infinite; }
+
+/* Trot: brisk, two-beat, medium amplitude */
+@keyframes trot-front-upper {
+  0%, 100% { transform: rotate(-24deg); }
+  50% { transform: rotate(24deg); }
+}
+@keyframes trot-front-lower {
+  0%, 100% { transform: rotate(16deg); }
+  50% { transform: rotate(-14deg); }
+}
+@keyframes trot-hind-upper {
+  0%, 100% { transform: rotate(24deg); }
+  50% { transform: rotate(-22deg); }
+}
+@keyframes trot-hind-lower {
+  0%, 100% { transform: rotate(-16deg); }
+  50% { transform: rotate(14deg); }
+}
+.horse-figure--trot.is-animating .leg-front-upper { animation: trot-front-upper 0.7s ease-in-out infinite; }
+.horse-figure--trot.is-animating .leg-front-lower { animation: trot-front-lower 0.7s ease-in-out infinite; }
+.horse-figure--trot.is-animating .leg-hind-upper { animation: trot-hind-upper 0.7s ease-in-out infinite; }
+.horse-figure--trot.is-animating .leg-hind-lower { animation: trot-hind-lower 0.7s ease-in-out infinite; }
+
+/* Canter: rolling three-beat (uneven keyframe spacing) + body bob */
+@keyframes canter-front-upper {
+  0%, 100% { transform: rotate(-30deg); }
+  35% { transform: rotate(10deg); }
+  70% { transform: rotate(30deg); }
+}
+@keyframes canter-front-lower {
+  0%, 100% { transform: rotate(20deg); }
+  35% { transform: rotate(-6deg); }
+  70% { transform: rotate(-16deg); }
+}
+@keyframes canter-hind-upper {
+  0%, 100% { transform: rotate(28deg); }
+  35% { transform: rotate(-10deg); }
+  70% { transform: rotate(-26deg); }
+}
+@keyframes canter-hind-lower {
+  0%, 100% { transform: rotate(-18deg); }
+  35% { transform: rotate(8deg); }
+  70% { transform: rotate(16deg); }
+}
+@keyframes canter-body-bob {
+  0%, 100% { transform: translateY(0); }
+  35% { transform: translateY(-6px); }
+  70% { transform: translateY(-2px); }
+}
+.horse-figure--canter.is-animating .leg-front-upper { animation: canter-front-upper 0.9s ease-in-out infinite; }
+.horse-figure--canter.is-animating .leg-front-lower { animation: canter-front-lower 0.9s ease-in-out infinite; }
+.horse-figure--canter.is-animating .leg-hind-upper { animation: canter-hind-upper 0.9s ease-in-out infinite; }
+.horse-figure--canter.is-animating .leg-hind-lower { animation: canter-hind-lower 0.9s ease-in-out infinite; }
+.horse-figure--canter.is-animating .horse-body-group { animation: canter-body-bob 0.9s ease-in-out infinite; }
+
+/* Gallop: fastest, largest amplitude, forward lean + stretch */
+@keyframes gallop-front-upper {
+  0%, 100% { transform: rotate(-40deg); }
+  50% { transform: rotate(38deg); }
+}
+@keyframes gallop-front-lower {
+  0%, 100% { transform: rotate(26deg); }
+  50% { transform: rotate(-22deg); }
+}
+@keyframes gallop-hind-upper {
+  0%, 100% { transform: rotate(38deg); }
+  50% { transform: rotate(-34deg); }
+}
+@keyframes gallop-hind-lower {
+  0%, 100% { transform: rotate(-24deg); }
+  50% { transform: rotate(22deg); }
+}
+@keyframes gallop-body-stretch {
+  0%, 100% { transform: rotate(-3deg) scaleX(1); }
+  50% { transform: rotate(-3deg) scaleX(1.06); }
+}
+.horse-figure--gallop.is-animating .leg-front-upper { animation: gallop-front-upper 0.45s ease-in-out infinite; }
+.horse-figure--gallop.is-animating .leg-front-lower { animation: gallop-front-lower 0.45s ease-in-out infinite; }
+.horse-figure--gallop.is-animating .leg-hind-upper { animation: gallop-hind-upper 0.45s ease-in-out infinite; }
+.horse-figure--gallop.is-animating .leg-hind-lower { animation: gallop-hind-lower 0.45s ease-in-out infinite; }
+.horse-figure--gallop.is-animating .horse-body-group { animation: gallop-body-stretch 0.45s ease-in-out infinite; transform-origin: 110px 60px; }
+
+/* tail flutter, tempo follows each gait */
+@keyframes tail-sway {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-8deg); }
+}
+.horse-figure.is-animating .horse-tail { animation: tail-sway 1.6s ease-in-out infinite; transform-origin: 32px 58px; }
+.horse-figure--trot.is-animating .horse-tail { animation-duration: 0.7s; }
+.horse-figure--canter.is-animating .horse-tail { animation-duration: 0.9s; }
+.horse-figure--gallop.is-animating .horse-tail { animation-duration: 0.45s; }
+
+/* rider posture per gait: mostly upright, gallop leans into a forward light seat */
+.rider-pose {
+  transform-origin: 118px 58px;
+  transition: transform 500ms var(--ease-out);
+}
+.rider-figure--walk .rider-pose,
+.rider-figure--trot .rider-pose,
+.rider-figure--canter .rider-pose {
+  transform: rotate(0deg) translateY(0);
+}
+.rider-figure--gallop .rider-pose {
+  transform: rotate(-16deg) translateY(-6px);
+}
+.rider-figure--trot.is-animating .rider-pose {
+  animation: trot-rise 0.7s ease-in-out infinite;
+}
+@keyframes trot-rise {
+  0%, 100% { transform: rotate(0deg) translateY(0); }
+  50% { transform: rotate(0deg) translateY(-5px); }
+}
+.rider-figure--canter.is-animating .rider-pose {
+  animation: canter-follow 0.9s ease-in-out infinite;
+}
+@keyframes canter-follow {
+  0%, 100% { transform: rotate(0deg) translateY(0); }
+  35% { transform: rotate(-4deg) translateY(-3px); }
+  70% { transform: rotate(2deg) translateY(1px); }
+}
+.rider-figure--gallop.is-animating .rider-pose {
+  animation: gallop-light-seat 0.45s ease-in-out infinite;
+}
+@keyframes gallop-light-seat {
+  0%, 100% { transform: rotate(-16deg) translateY(-6px); }
+  50% { transform: rotate(-19deg) translateY(-8px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .horse-figure.is-animating .leg,
+  .horse-figure.is-animating .horse-body-group,
+  .horse-figure.is-animating .horse-tail,
+  .rider-figure.is-animating .rider-pose {
+    animation: none !important;
+  }
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 760px) {
+  .topbar {
+    padding: 16px 20px;
+  }
+  .topbar-sub {
+    display: none;
+  }
+  .landing,
+  .gait-scene {
+    padding: 32px 20px 32px;
+  }
+  .landing-copy {
+    display: block;
+  }
+  .landing-copy h1 {
+    font-size: 44px;
+    margin: 18px 0;
+  }
+  .gait-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .gait-entry {
+    min-height: 190px;
+    padding: 12px 10px 16px;
+  }
+  .gait-entry-stage {
+    height: 96px;
+  }
+  .gait-entry-name strong {
+    font-size: 19px;
+  }
+  .landing-foot {
+    font-size: 7px;
+  }
+  .landing-foot span:last-child {
+    display: none;
+  }
+  .transition-stage {
+    display: block;
+    padding: 16vh 20px 0;
+  }
+  .transition-horse {
+    width: 60vw;
+    margin: 8vh auto 0;
+  }
+  .gait-scene-meta {
+    gap: 10px;
+  }
+  .gait-stage-figure {
+    width: 78vw;
+  }
+}
