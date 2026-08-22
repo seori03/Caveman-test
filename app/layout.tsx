@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   title: SITE_TITLE,
   description:
     "물리치료 학생의 임상추론 성장 포트폴리오 — 공부, 임상실습, Case, 그리고 임상적 판단의 성장 기록",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({
